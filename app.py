@@ -2,8 +2,11 @@ import joblib
 import pandas as pd
 from ai_wrapper import generate_explanation
 from flask import Flask, request, jsonify
+from flask_cors import CORS 
 
 app = Flask(__name__)
+
+CORS(app)
 
 scaler = joblib.load("./pkl/Scaler.pkl")
 
