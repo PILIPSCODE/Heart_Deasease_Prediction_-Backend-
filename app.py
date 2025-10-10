@@ -17,9 +17,9 @@ for col in [
     "slope",
     "thal",
 ]:
-    encoders[col] = joblib.load(f"./Pkl/Le{col}.pkl")
+    encoders[col] = joblib.load(f"./pkl/Le{col}.pkl")
 
-le_target = joblib.load("./Pkl/Letarget.pkl")
+le_target = joblib.load("./pkl/Letarget.pkl")
 
 models = {
     "rf": joblib.load("./best_model/best_model_RandomForest.joblib"),
