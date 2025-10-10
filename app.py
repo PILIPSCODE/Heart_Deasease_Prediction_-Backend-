@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-scaler = joblib.load("./Pkl/Scaler.pkl")
+scaler = joblib.load("./pkl/Scaler.pkl")
 
 encoders = {}
 for col in [
