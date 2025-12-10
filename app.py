@@ -2,7 +2,7 @@ import joblib
 import pandas as pd
 from ai_wrapper import generate_explanation
 from flask import Flask, request, jsonify
-from flask_cors import CORS 
+from flask_cors import CORS
 
 app = Flask(__name__)
 
@@ -27,8 +27,8 @@ le_target = joblib.load("./pkl/Letarget.pkl")
 models = {
     "rf": joblib.load("./best_model/best_model_RandomForest.joblib"),
     "knn": joblib.load("./best_model/best_model_KNN.joblib"),
-    "logreg": joblib.load("./best_model/best_model_LogisticRegression.joblib"),
-    "xgb": joblib.load("./best_model/best_model_XGB.joblib"),
+    # "logreg": joblib.load("./best_model/best_model_LogisticRegression.joblib"),
+    # "xgb": joblib.load("./best_model/best_model_XGB.joblib"),
 }
 
 
